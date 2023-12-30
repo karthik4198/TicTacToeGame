@@ -10,7 +10,6 @@ public class DiagonalWinningStrategies implements WinningStrategies{
     HashMap<Character,Integer> rightDiag=new HashMap<>();
     @Override
     public boolean methodToWin(Board board, Moves move){
-        System.out.println("diagonal winning strategy def");
         int row=move.getCells().getRow();
         int col=move.getCells().getCol();
         char symbol=move.getPlayers().getSymbol();
@@ -24,6 +23,7 @@ public class DiagonalWinningStrategies implements WinningStrategies{
             leftDiag.put(symbol,cnt);
 
             if(leftDiag.get(symbol)==boardSize){
+                System.out.println(symbol+ "won through left diagonal");
                 return true;
             }
         }
@@ -36,6 +36,7 @@ public class DiagonalWinningStrategies implements WinningStrategies{
              rightDiag.put(symbol,cnt);
 
             if(rightDiag.get(symbol)==boardSize){
+                System.out.println(symbol+ "won through right diagonal");
                 return true;
             }
         }

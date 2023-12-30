@@ -50,12 +50,15 @@ public class Players {
     }
 
     public Cells makeMove(Board board){
-        System.out.println("cells make move");
+        System.out.println("Please enter the row");
         int row=scanner.nextInt();
+        System.out.println("Please enter the column");
         int col=scanner.nextInt();
         while(!validateMove(row,col,board)){
             System.out.println("Please try again with correct row and column");
+            System.out.println("Please enter the row");
             row=scanner.nextInt();
+            System.out.println("Please enter the column");
             col=scanner.nextInt();
         }
         Cells cell=board.getBoard().get(row).get(col);

@@ -24,8 +24,6 @@ public class MediumBotPlayingStrategy implements BotPlayingStrategy {
             col= random.nextInt(max - min + 1);
             cell=board.getBoard().get(row).get(col);
         }
-        System.out.println("row :"+row);
-        System.out.println("col :"+col);
         return cell;
     }
 }

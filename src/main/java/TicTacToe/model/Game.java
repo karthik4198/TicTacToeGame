@@ -36,7 +36,6 @@ public class Game {
 
 
     public void makeMove(){
-        System.out.println("game make move");
         Players p=players.get(nextPlayerIndex);
         Cells cell=p.makeMove(board);
         Moves move=new Moves(cell,p);
@@ -142,7 +141,6 @@ public class Game {
         public Game build() throws MorePlayerException, Morethanonebotexception, Symbolduplicatexception, ValidationsFailedException {
             //Here you can validate and then create Game object
             if(validatePlayers() && validateBotCount() && validateSymbol()){
-                System.out.println("create game object");
                 return new Game(dimensions,players,winningStrategies);
             }
             else{
@@ -151,7 +149,6 @@ public class Game {
         }
 
         public boolean validatePlayers() throws MorePlayerException {
-            System.out.println("hff"+players.size());
             if(players.size()!=dimensions-1){
                 throw new MorePlayerException();
             }

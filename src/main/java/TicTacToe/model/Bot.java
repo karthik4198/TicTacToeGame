@@ -18,7 +18,7 @@ public class Bot extends Players{
     }
     @Override
     public Cells makeMove(Board board){
-        System.out.println("Get ready for the GPT's move ");
+        System.out.println("Get ready for the BOT's move ");
         Cells cell = botPlayingStrategy.botMakeMove(board);
         cell.setCellState(Cellstate.FILLED);
         cell.setPlayers(this);

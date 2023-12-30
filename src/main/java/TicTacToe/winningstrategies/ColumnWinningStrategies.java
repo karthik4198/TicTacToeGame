@@ -9,7 +9,6 @@ public class ColumnWinningStrategies implements WinningStrategies{
     HashMap<Integer, HashMap<Character,Integer>> map=new HashMap<>();
     @Override
     public boolean methodToWin(Board board, Moves move){
-        System.out.println("col winning strategy def");
         int col=move.getCells().getCol();
         char symbol=move.getPlayers().getSymbol();
         int boardSize=board.getDimension();
@@ -25,6 +24,7 @@ public class ColumnWinningStrategies implements WinningStrategies{
         cnt=cnt+1;
         colMap.put(symbol,cnt);
         if(colMap.get(symbol)==boardSize){
+            System.out.println(symbol+" won through "+col+"th column matching");
             return true;
         }
         return false;

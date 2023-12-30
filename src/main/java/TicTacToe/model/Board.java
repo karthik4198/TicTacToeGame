@@ -1,6 +1,5 @@
 package TicTacToe.model;
 
-import java.sql.Array;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -38,7 +37,6 @@ public class Board {
     }
 
     public void printBoard(){
-        System.out.println("board print board");
         for(List<Cells> row: board){
             for(Cells cell:row){
                 cell.display();
